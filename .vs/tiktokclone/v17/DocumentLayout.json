@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|c:\\users\\dang to\\desktop\\demo\\tiktokclone\\1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|solutionrelative:1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 243,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "1.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\appsettings.json",
+              "RelativeToolTip": "1.Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T02:39:49.19Z",
+              "EditorCaption": ""
             }
           ]
         },
