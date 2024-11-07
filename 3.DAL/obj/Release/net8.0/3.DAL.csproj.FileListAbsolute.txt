@@ -1,0 +1,15 @@
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\bin\Release\net8.0\3.DAL.deps.json
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\bin\Release\net8.0\3.DAL.runtimeconfig.json
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\bin\Release\net8.0\3.DAL.dll
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\bin\Release\net8.0\3.DAL.pdb
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.csproj.AssemblyReference.cache
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.AssemblyInfoInputs.cache
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.AssemblyInfo.cs
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.csproj.CoreCompileInputs.cache
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.sourcelink.json
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.dll
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\refint\3.DAL.dll
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.pdb
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\3.DAL.genruntimeconfig.cache
+C:\Users\DANG TO\Desktop\demo\tiktokclone\3.DAL\obj\Release\net8.0\ref\3.DAL.dll

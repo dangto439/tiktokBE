@@ -13,3 +13,4 @@ C:\Users\DANG TO\Desktop\demo\tiktokclone\2.BLL\obj\Debug\net8.0\2.BLL.dll
 C:\Users\DANG TO\Desktop\demo\tiktokclone\2.BLL\obj\Debug\net8.0\refint\2.BLL.dll
 C:\Users\DANG TO\Desktop\demo\tiktokclone\2.BLL\obj\Debug\net8.0\2.BLL.pdb
 C:\Users\DANG TO\Desktop\demo\tiktokclone\2.BLL\obj\Debug\net8.0\ref\2.BLL.dll
+C:\Users\DANG TO\Desktop\demo\tiktokclone\2.BLL\obj\Debug\net8.0\2.BLL.sourcelink.json
