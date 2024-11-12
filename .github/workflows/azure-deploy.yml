@@ -16,7 +16,7 @@ jobs:
       - name: Set up .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0" # Use .NET 8 for your project
+          dotnet-version: "8.0"
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
@@ -24,11 +24,14 @@ jobs:
       - name: dotnet publish
         run: dotnet publish -c Release -o "${{ github.workspace }}/myapp"
 
+      - name: List files in myapp directory
+        run: ls ${{ github.workspace }}/myapp
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{ github.workspace }}/myapp # Point to the publish output
+          path: ${{ github.workspace }}/myapp
 
   deploy:
     runs-on: windows-latest
@@ -36,7 +39,7 @@ jobs:
     environment:
       name: "Production"
     permissions:
-      id-token: write # Required for requesting the JWT
+      id-token: write
 
     steps:
       - name: Download artifact from build job
@@ -58,6 +61,6 @@ jobs:
           package: ${{ github.workspace }}/myapp
 
       - name: Apply database migrations
-        run: dotnet ef database update #--project <YourProjectName> # Update this with your project's name if needed
+        run: dotnet ef database update
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.MYSQL_CONNECTION_STRING }}
