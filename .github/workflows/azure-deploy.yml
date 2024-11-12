@@ -1,0 +1,63 @@
+name: Build and deploy ASP.Net Core app to Azure Web App - TikTokBE
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0" # Use .NET 8 for your project
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{ runner.workspace }}/myapp" # Updated publish output path
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: ${{ runner.workspace }}/myapp # Point to the publish output
+
+  deploy:
+    runs-on: windows-latest
+    needs: build
+    environment:
+      name: "Production"
+    permissions:
+      id-token: write # Required for requesting the JWT
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: .net-app
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "TikTokBE"
+          slot-name: "Production"
+          package: ${{ runner.workspace }}/myapp # Use the correct path to published output
+
+      - name: Apply database migrations
+        run: dotnet ef database update #--project <YourProjectName> # Update this with your project's name if needed
+        env:
+          ConnectionStrings__DefaultConnection: ${{ secrets.MYSQL_CONNECTION_STRING }}

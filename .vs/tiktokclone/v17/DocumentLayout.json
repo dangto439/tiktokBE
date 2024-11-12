@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|c:\\users\\dang to\\desktop\\demo\\tiktokclone\\1.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|solutionrelative:1.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|solutionrelative:1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.dal\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|solutionrelative:3.dal\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9381894A-C303-457D-8E1F-EF64BC53FE0A}|1.Server\\1.Server.csproj|solutionrelative:1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.dal\\tiktokdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|solutionrelative:3.dal\\tiktokdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.dal\\tiktokdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4495F435-3FCC-4B9E-B04A-850768313FAA}|3.DAL\\3.DAL.csproj|solutionrelative:3.dal\\tiktokdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 243,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "1.Server\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "1.Server\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T11:37:16.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "3.DAL\\Entity\\User.cs",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\Entity\\User.cs",
+              "RelativeToolTip": "3.DAL\\Entity\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:26:35.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TiktokDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\TiktokDbContextFactory.cs",
+              "RelativeDocumentMoniker": "3.DAL\\TiktokDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\TiktokDbContextFactory.cs",
+              "RelativeToolTip": "3.DAL\\TiktokDbContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:58:05.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TiktokDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\TiktokDbContext.cs",
+              "RelativeDocumentMoniker": "3.DAL\\TiktokDbContext.cs",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\3.DAL\\TiktokDbContext.cs",
+              "RelativeToolTip": "3.DAL\\TiktokDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T04:57:56.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\Program.cs",
+              "RelativeDocumentMoniker": "1.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\Program.cs",
+              "RelativeToolTip": "1.Server\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T02:59:01.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "1.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\DANG TO\\Desktop\\demo\\tiktokclone\\1.Server\\appsettings.json",
+              "RelativeToolTip": "1.Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-07T02:39:49.19Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 157,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:69:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:68:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:71:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:73:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:74:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
