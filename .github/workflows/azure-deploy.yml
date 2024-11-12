@@ -27,11 +27,17 @@ jobs:
       - name: List files in myapp directory
         run: ls ${{ github.workspace }}/myapp
 
+      - name: Create ZIP package for deployment
+        run: |
+          cd ${{ github.workspace }}/myapp
+          zip -r myapp.zip .  # Tạo gói ZIP từ thư mục myapp
+          ls -la  # Kiểm tra các file sau khi zip
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{ github.workspace }}/myapp
+          path: ${{ github.workspace }}/myapp/myapp.zip # Chỉ định đường dẫn tới file zip
 
   deploy:
     runs-on: windows-latest
@@ -58,7 +64,7 @@ jobs:
         with:
           app-name: "TikTokBE"
           slot-name: "Production"
-          package: ${{ github.workspace }}/myapp
+          package: ${{ github.workspace }}/myapp/myapp.zip # Chỉ định file ZIP đã tạo
 
       - name: Apply database migrations
         run: dotnet ef database update
