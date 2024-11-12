@@ -21,14 +21,14 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-        - name: dotnet publish
-        run: dotnet publish -c Release -o "${{ github.workspace }}/myapp"      
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{ github.workspace }}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{ runner.workspace }}/myapp # Point to the publish output
+          path: ${{ github.workspace }}/myapp # Point to the publish output
 
   deploy:
     runs-on: windows-latest
@@ -49,13 +49,13 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-          - name: Deploy to Azure Web App
-          id: deploy-to-webapp
-          uses: azure/webapps-deploy@v3
-          with:
-            app-name: "TikTokBE"
-            slot-name: "Production"
-            package: ${{ github.workspace }}/myapp        
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "TikTokBE"
+          slot-name: "Production"
+          package: ${{ github.workspace }}/myapp
 
       - name: Apply database migrations
         run: dotnet ef database update #--project <YourProjectName> # Update this with your project's name if needed
