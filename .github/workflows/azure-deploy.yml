@@ -64,6 +64,9 @@ jobs:
           slot-name: "Production"
           package: ${{ runner.workspace }}\myapp
 
+      - name: Install dotnet-ef tool
+        run: dotnet tool install --global dotnet-ef
+
       - name: Apply database migrations
         run: dotnet ef database update
         env:
