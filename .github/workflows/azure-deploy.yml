@@ -13,21 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Thiết lập .NET
+      - name: Set up .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0"
 
-      - name: Build với dotnet
+      - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: Xuất bản dotnet
+      - name: Publish with dotnet
         run: dotnet publish -c Release -o "${{ github.workspace }}/myapp"
 
-      - name: Liệt kê các file trong thư mục myapp
-        run: ls ${{ github.workspace }}/myapp
+      - name: List files in myapp directory (after publish)
+        run: dir ${{ github.workspace }}\myapp
 
-      - name: Tải lên artifact để deploy
+      - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
@@ -42,25 +42,29 @@ jobs:
       id-token: write
 
     steps:
-      - name: Tải xuống artifact từ build job
+      - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: .net-app
+          path: ${{ runner.workspace }}/myapp
 
-      - name: Đăng nhập vào Azure
+      - name: List files in downloaded artifact directory
+        run: dir ${{ runner.workspace }}\myapp
+
+      - name: Login to Azure
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy lên Azure Web App
+      - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: "TikTokBE"
           slot-name: "Production"
-          package: ${{ runner.workspace }}/tiktokBE/myapp
+          package: ${{ runner.workspace }}\myapp
 
-      - name: Thực hiện migrate database
+      - name: Apply database migrations
         run: dotnet ef database update
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.MYSQL_CONNECTION_STRING }}
