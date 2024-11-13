@@ -68,6 +68,8 @@ jobs:
         run: dotnet tool install --global dotnet-ef
 
       - name: Apply database migrations
-        run: dotnet ef database update --project ${{ runner.workspace }}/myapp/3.DAL.csproj
+        run: dotnet ef database update --project ${{ runner.workspace }}\myapp\3.DAL --startup-project ${{ runner.workspace }}\myapp\1.Server
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.MYSQL_CONNECTION_STRING }}
+
+      ##########################################
