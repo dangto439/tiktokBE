@@ -1,0 +1,1 @@
+[![Build and deploy ASP.Net Core app to Azure Web App - TikTokBE](https://github.com/dangto439/tiktokBE/actions/workflows/azure-deploy.yml/badge.svg)](https://github.com/dangto439/tiktokBE/actions/workflows/azure-deploy.yml)
