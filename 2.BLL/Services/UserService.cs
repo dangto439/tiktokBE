@@ -1,6 +1,7 @@
 ﻿using _2.BLL.Interface;
 using _3.DAL.Entity;
 using _3.DAL.Repositories;
+using Microsoft.IdentityModel.Tokens;
 using System.Globalization;
 using System.Text;
 
@@ -36,14 +37,37 @@ namespace _2.BLL.Services
 
         public async Task<object> SearchUsersByNameAsync(string name, string type)
         {
-            int page = 1;  // Bạn có thể thay đổi trang từ phía người dùng (thêm tham số `page` nếu cần).
+            int page = 1;  // Có thể điều chỉnh trang từ phía người dùng bằng cách thêm tham số `page`
             var pageSize = 10;  // Kích thước mỗi trang cho trường hợp 'more'
 
             // Lấy tất cả người dùng
             var allUsers = await _userRepository.GetAllUsersAsync();
 
-            // Chuẩn hóa tên tìm kiếm và tên người dùng (bỏ dấu, bỏ cách)
-            string normalizedSearchName = RemoveSpaces(RemoveDiacritics(name.ToLower()));
+            // Trường hợp nếu `name` để trống và `type` là "more", trả về toàn bộ danh sách với phân trang
+            if (string.IsNullOrEmpty(name) && type == "more")
+            {
+                int totalUsers = allUsers.Count;
+                int totalPages = (int)Math.Ceiling(totalUsers / (double)pageSize);
+
+                var pagedUsers = allUsers
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+
+                return new
+                {
+                    data = pagedUsers,
+                    pagination = new
+                    {
+                        currentPage = page,
+                        totalPages = totalPages,
+                        totalUsers = totalUsers
+                    }
+                };
+            }
+
+            // Chuẩn hóa tên tìm kiếm và tên người dùng nếu `name` có giá trị
+            string normalizedSearchName = RemoveSpaces(RemoveDiacritics(name?.ToLower() ?? string.Empty));
 
             // Lọc người dùng theo tên
             var filteredUsers = allUsers.FindAll(user =>
@@ -57,8 +81,8 @@ namespace _2.BLL.Services
             // Trường hợp 'more' - phân trang với 10 kết quả mỗi trang
             else if (type == "more")
             {
-                int totalUsers = filteredUsers.Count;  // Tổng số người dùng sau khi lọc
-                int totalPages = (int)Math.Ceiling(totalUsers / (double)pageSize);  // Tổng số trang
+                int totalUsers = filteredUsers.Count;
+                int totalPages = (int)Math.Ceiling(totalUsers / (double)pageSize);
 
                 var pagedUsers = filteredUsers
                     .Skip((page - 1) * pageSize)
@@ -77,9 +101,11 @@ namespace _2.BLL.Services
                 };
             }
 
-            // Trường hợp type không hợp lệ, trả về danh sách trống
+            // Trường hợp `type` không hợp lệ, trả về danh sách trống
             return new List<User>();
         }
+
+
 
 
 

@@ -17,8 +17,8 @@ namespace _1.Server.Controllers
         // Endpoint để tìm kiếm người dùng theo tên và phân trang nếu cần
         [HttpGet("search")]
         public async Task<IActionResult> SearchUsersByName(
-            [FromQuery] string name,
-            [FromQuery] string type = "less")
+        [FromQuery] string? name, 
+        [FromQuery] string type = "less")
         {
             // Kiểm tra nếu `type` không hợp lệ
             if (type != "less" && type != "more")
@@ -26,12 +26,14 @@ namespace _1.Server.Controllers
                 return BadRequest("Type must be either 'less' or 'more'.");
             }
 
-            var users = await _userService.SearchUsersByNameAsync(name, type);
+            // Gọi dịch vụ tìm kiếm người dùng
+            var users = await _userService.SearchUsersByNameAsync(name ?? string.Empty, type);
             return Ok(users);
         }
 
+
         [HttpGet("testCICD")]
-        public string TestCICD ()
+        public string TestCICD()
         {
             return "CI/CD successfully";
         }
