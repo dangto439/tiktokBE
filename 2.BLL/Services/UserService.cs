@@ -35,9 +35,9 @@ namespace _2.BLL.Services
             return await _userRepository.GetUserByIdAsync(userId);
         }
 
-        public async Task<object> SearchUsersByNameAsync(string name, string type)
+        public async Task<object> SearchUsersByNameAsync(string name, string type, int page)
         {
-            int page = 1;  // Có thể điều chỉnh trang từ phía người dùng bằng cách thêm tham số `page`
+             // Có thể điều chỉnh trang từ phía người dùng bằng cách thêm tham số `page`
             var pageSize = 10;  // Kích thước mỗi trang cho trường hợp 'more'
 
             // Lấy tất cả người dùng
@@ -104,7 +104,6 @@ namespace _2.BLL.Services
             // Trường hợp `type` không hợp lệ, trả về danh sách trống
             return new List<User>();
         }
-
 
 
 

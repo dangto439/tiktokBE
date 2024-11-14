@@ -20,6 +20,6 @@ namespace _2.BLL.Interface
         Task<List<User>> GetAllUsersAsync();
 
         // Tìm kiếm user theo tên
-        Task<object> SearchUsersByNameAsync(string name, string type);
+        Task<object> SearchUsersByNameAsync(string name, string type, int page);
     }
 }

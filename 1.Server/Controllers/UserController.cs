@@ -18,7 +18,8 @@ namespace _1.Server.Controllers
         [HttpGet("search")]
         public async Task<IActionResult> SearchUsersByName(
         [FromQuery] string? name, 
-        [FromQuery] string type = "less")
+        [FromQuery] string type = "less",
+        [FromQuery] int page =1)
         {
             // Kiểm tra nếu `type` không hợp lệ
             if (type != "less" && type != "more")
@@ -27,7 +28,7 @@ namespace _1.Server.Controllers
             }
 
             // Gọi dịch vụ tìm kiếm người dùng
-            var users = await _userService.SearchUsersByNameAsync(name ?? string.Empty, type);
+            var users = await _userService.SearchUsersByNameAsync(name ?? string.Empty, type, page);
             return Ok(users);
         }
 
